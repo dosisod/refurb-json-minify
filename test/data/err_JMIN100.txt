@@ -1,0 +1,8 @@
+test/data/err_JMIN100.py:7:5 [JMIN100]: Replace `json.dump(x, f)` with `json.dump(x, f, separators=(",", ":"))`
+test/data/err_JMIN100.py:8:5 [JMIN100]: Replace `json.dump(x, f, ...)` with `json.dump(x, f, ..., separators=(",", ":"))`
+test/data/err_JMIN100.py:9:5 [JMIN100]: Replace `json.dump(x, f)` with `json.dump(x, f, separators=(",", ":"))`
+test/data/err_JMIN100.py:11:1 [JMIN100]: Replace `json.dumps(x)` with `json.dumps(x, separators=(",", ":"))`
+test/data/err_JMIN100.py:12:1 [JMIN100]: Replace `json.dumps(x, ...)` with `json.dumps(x, ..., separators=(",", ":"))`
+test/data/err_JMIN100.py:13:1 [JMIN100]: Replace `json.dumps(x, ...)` with `json.dumps(x, ..., separators=(",", ":"))`
+test/data/err_JMIN100.py:14:1 [JMIN100]: Replace `json.dumps(x, ...)` with `json.dumps(x, ..., separators=(",", ":"))`
+test/data/err_JMIN100.py:15:1 [JMIN100]: Replace `json.dumps(x)` with `json.dumps(x, separators=(",", ":"))`
