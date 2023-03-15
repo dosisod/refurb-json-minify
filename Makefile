@@ -1,6 +1,6 @@
 .PHONY: install ruff mypy black isort test self-test
 
-all: ruff black isort test self-test
+all: ruff mypy black isort test self-test
 
 install:
 	pip install .

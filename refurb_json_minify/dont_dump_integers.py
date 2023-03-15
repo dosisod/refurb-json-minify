@@ -38,12 +38,12 @@ def check(node: CallExpr, errors: list[Error]) -> None:
         ) if is_valid_json_call(node):
             match arg:
                 case IntExpr(value=value):
-                    expr = value
+                    expr = str(value)
                     replace = f'"{value}"'
 
                 case RefExpr(node=Var(type=ty)) if str(ty) == "builtins.int":
                     expr = (
-                        arg.name  # type: ignore
+                        arg.name
                         if hasattr(arg, "name")
                         else arg.fullname or ""
                     )

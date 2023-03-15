@@ -69,7 +69,7 @@ line-length = 80
 
 extend-select = [
   "W", "N", "UP", "YTT", "S", "BLE", "B",
-  "C40", "DTZ", "ISC", "PIE", "PT", "RET",
+  "C4", "DTZ", "ISC", "PIE", "PT", "RET",
   "SIM", "PTH", "PLE", "RUF", "FBT",
 ]
 
