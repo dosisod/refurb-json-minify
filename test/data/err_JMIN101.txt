@@ -1,0 +1,6 @@
+test/data/err_JMIN101.py:6:5 [JMIN101]: Replace `json.dumps(1234)` with `"1234"`
+test/data/err_JMIN101.py:7:5 [JMIN101]: Replace `json.dumps(1234, ...)` with `"1234"`
+test/data/err_JMIN101.py:8:5 [JMIN101]: Replace `json.dumps(0)` with `"0"`
+test/data/err_JMIN101.py:11:5 [JMIN101]: Replace `json.dumps(num)` with `str(num)`
+test/data/err_JMIN101.py:14:5 [JMIN101]: Replace `json.dump(1234, f)` with `f.write("1234")`
+test/data/err_JMIN101.py:15:5 [JMIN101]: Replace `json.dump(1234, f)` with `f.write("1234")`

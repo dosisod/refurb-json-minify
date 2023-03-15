@@ -3,6 +3,10 @@ from dataclasses import dataclass
 from mypy.nodes import CallExpr, NameExpr, RefExpr
 
 from refurb.error import Error
+from refurb_json_minify.common import (
+    format_json_trailing_args,
+    is_valid_json_call,
+)
 
 
 @dataclass
@@ -41,24 +45,11 @@ class ErrorInfo(Error):
 def check(node: CallExpr, errors: list[Error]) -> None:
     match node:
         case CallExpr(
-            callee=RefExpr(fullname="json.dump" | "json.dumps" as func),
+            callee=RefExpr(fullname=func),
             args=args,
             arg_names=arg_names,
-        ):
-            if func == "json.dumps":
-                min_args = 1
-                extra = ""
-            else:
-                min_args = 2
-                extra = ", f"
-
-            if len(args) < min_args:
-                return
-
-            if len(args) > min_args:
-                extra += ", ..."
-
-            for i, name in enumerate(arg_names[min_args:], start=min_args):
+        ) if is_valid_json_call(node):
+            for i, name in enumerate(arg_names):
                 if name == "separators":
                     return
 
@@ -69,6 +60,8 @@ def check(node: CallExpr, errors: list[Error]) -> None:
 
                         case _:
                             return
+
+            extra = format_json_trailing_args(func, len(args))
 
             separators = ', separators=(",", ":")'
 

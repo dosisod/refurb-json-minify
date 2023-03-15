@@ -19,7 +19,7 @@ classifiers = [
 module = "refurb_json_minify"
 
 [tool.poetry.dependencies]
-refurb = "1.4.0"
+refurb = ">=1.4.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
@@ -69,7 +69,7 @@ line-length = 80
 
 extend-select = [
   "W", "N", "UP", "YTT", "S", "BLE", "B",
-  "C4", "DTZ", "ISC", "PIE", "PT", "RET",
+  "C40", "DTZ", "ISC", "PIE", "PT", "RET",
   "SIM", "PTH", "PLE", "RUF", "FBT",
 ]
 
