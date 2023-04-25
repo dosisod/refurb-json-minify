@@ -44,3 +44,8 @@ len(a)=43 len(b)=37
 
 By reducing the whitespace in our JSON output we where able to shave off 6 bytes, or about
 16% in this example.
+
+### `JMIN101`: Don't `json.dump()` integers
+
+Don't call `json.dump()` on integers, use `str()` instead since they share the
+same representation.
